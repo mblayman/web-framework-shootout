@@ -59,6 +59,9 @@ db.sqlite3
 instance/
 .webassets-cache
 
+# Pyramid
+*.sqlite
+
 # Scrapy stuff:
 .scrapy
 
