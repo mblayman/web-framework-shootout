@@ -16,6 +16,11 @@ def my_view(request):
     return {'one': one, 'project': 'My App'}
 
 
+@view_config(route_name='index', renderer='../templates/index.jinja2')
+def index(request):
+    return {'msg': 'hello world'}
+
+
 db_err_msg = """\
 Pyramid is having a problem using your SQL database.  The problem
 might be caused by one of the following things:
