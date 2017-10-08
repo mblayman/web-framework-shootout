@@ -4,7 +4,10 @@ from app import views
 
 
 urlpatterns = [
-    url(r'^$',
+    url(r'^html$',
         views.index,
-        name='app_index')
+        name='app_html'),
+    url(r'^json$',
+        views.json,
+        name='app_json'),
 ]
