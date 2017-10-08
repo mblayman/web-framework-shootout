@@ -5,12 +5,17 @@ from apistar.renderers import HTMLRenderer
 
 
 @annotate(renderers=[HTMLRenderer()])
-def welcome(name=None):
+def html():
     return 'Hello World'
 
 
+def json():
+    return {'hello': 'world'}
+
+
 routes = [
-    Route('/', 'GET', welcome),
+    Route('/html', 'GET', html),
+    Route('/json', 'GET', json),
     Include('/docs', docs_urls),
     Include('/static', static_urls)
 ]
