@@ -1,0 +1,2 @@
+run:
+	pserve development.ini

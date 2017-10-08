@@ -21,6 +21,11 @@ def index(request):
     return {'msg': 'hello world'}
 
 
+@view_config(route_name='json', renderer='json')
+def json(request):
+    return {'hello': 'world'}
+
+
 db_err_msg = """\
 Pyramid is having a problem using your SQL database.  The problem
 might be caused by one of the following things:
