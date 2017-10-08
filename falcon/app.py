@@ -7,6 +7,11 @@ class HelloResource:
         resp.body = 'Hello World'
 
 
+class JsonResource:
+    def on_get(self, req, resp):
+        resp.media = {'hello': 'world'}
+
+
 app = falcon.API()
-hello = HelloResource()
-app.add_route('/', hello)
+app.add_route('/html', HelloResource())
+app.add_route('/json', JsonResource())
